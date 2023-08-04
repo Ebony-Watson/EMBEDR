@@ -555,7 +555,8 @@ class tSNE_Embed:
                  return_DKL=False):
 
         self._gradient[:] = 0
-
+        self.embedding = np.ascontiguousarray(self.embedding)
+                     
         ## If the embedding is 1D:
         if self.n_components == 1:
             sum_Q = _tsne.estimate_negative_gradient_fft_1d(
