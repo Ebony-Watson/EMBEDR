@@ -392,7 +392,7 @@ class tSNE_Embed:
 
         ## Start the timer if we're worried about printing information.
         if self.verbose >= 1:
-            timer_str  = f"Fitting t-SNE for up to {n_iter} iterations with"
+            timer_str  = f"Fitting t-SNE with random state {self.rs} for up to {n_iter} iterations with"
             timer_str += f" exaggeration = {exaggeration:.1f} and learning"
             timer_str += f" rate = {self.learning_rate:.1f}."
             timer = utl.Timer(timer_str)
